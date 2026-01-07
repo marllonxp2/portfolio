@@ -341,13 +341,13 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 10px;
+        gap: 30px;
     }
 
     .sobre-image img {
         width: 120px;
         height: 120px;
-        margin: 0 auto 1px;
+        margin: 0 auto 20px;
         object-fit: cover;
         border-radius: 50%;
     }
