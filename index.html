@@ -24,11 +24,12 @@
 
     <!-- ===== HEADER / NAVBAR ===== -->
     <header class="header">
-        <div class="container">
+        <div class="container header-content">
             <div class="logo">
                 <span>Marllon Santos</span>
             </div>
 
+            <!-- MENU DESKTOP -->
             <nav class="nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -38,13 +39,38 @@
                 </ul>
             </nav>
 
+            <!-- ÍCONES SOCIAIS (DESKTOP) -->
             <div class="social-icons">
                 <a href="https://github.com/marllonxp2"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/marllonxp2"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.instagram.com/marllonssantos_"><i class="fab fa-instagram"></i></a>
             </div>
+
+            <!-- BOTÃO HAMBURGUER -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         </div>
     </header>
+
+    <!-- MENU MOBILE -->
+<nav class="mobile-menu">
+
+     <button class="close-menu">&times;</button>
+
+    <a href="#home">Home</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+
+    <div class="mobile-social">
+        <a href="https://github.com/marllonxp2"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/marllonxp2"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/marllonssantos_"><i class="fab fa-instagram"></i></a>
+    </div>
+</nav>
 
     <!-- ===== HERO / HOME ===== -->
     <section id="home" class="hero">
@@ -84,19 +110,13 @@
                         Olá, sou Marllon Santos, Ex-Fuzileiro Naval.
                         <br>
                         Apesar da minha profissão inicial, descobri minha verdadeira paixão: o Desenvolvimento Front
-                        End.
-                        <br>
-                        Estou em transição de carreira e após uma profunda reflexão e pesquisa, decidi me aventurar no
-                        mundo da programação.
-                        <br>
-                        Comecei meus estudos fazendo faculdade de Analise e Desenvolvimento de
-                        Sistemas e no curso DevClub e rapidamente me apaixonei pelo desenvolvimento de interfaces web
+                        End. Estou em transição de carreira e após uma profunda reflexão e pesquisa, decidi me aventurar no
+                        mundo da programação. Comecei meus estudos fazendo faculdade de Analise e Desenvolvimento de
+                        Sistemas e rapidamente me apaixonei pelo desenvolvimento de interfaces web
                         dinâmicas, utilizando tecnologias como HTML, CSS, JavaScript e React.
                         <br>
                         Estou determinado a aprofundar minhas habilidades e construir uma carreira sólida no
-                        desenvolvimento web.
-                        <br>
-                        Estou aberto a oportunidades e colaborações que me permitam crescer e
+                        desenvolvimento web. Estou aberto a oportunidades e colaborações que me permitam crescer e
                         contribuir significativamente.
                         <br>
                         Vamos nos conectar e explorar como podemos colaborar!
@@ -108,7 +128,7 @@
                         <span class="skill">JavaScript</span>
                         <span class="skill">TypeScript</span>
                         <span class="skill">React</span>
-                        
+
                         <span class="skill">GitHub</span>
                     </div>
                 </div>
@@ -128,7 +148,10 @@
                     <h3>DevBurger 🍔</h3>
                     <p>O DEV BURGER é um sistema de e-commerce completo para uma hamburgueria, desenvolvido do zero com
                         foco em performance, escalabilidade e experiência do usuário.</p>
-                    <!-- <a href="#" class="btn-secondary">Ver Código</a> -->
+                    <div class="btn-group">
+                        <a href="#" class="btn-secondary">Visitar</a>
+                        <a href="#" class="btn-secondary">Ver Código</a>
+                    </div>
                 </div>
 
                 <div class="projeto-card fade-in">
@@ -136,7 +159,10 @@
                     <h3>Conversor de Moedas</h3>
                     <p>O Conversor de Moedas é uma "plataforma que visa simplificar a conversão de moedas como Real para
                         Dólar, Euro, Libra e Bitcoin.</p>
-                    <!-- <a href="#" class="btn-secondary">Ver Código</a> -->
+                    <div class="btn-group">
+                        <a href="https://unique-speculoos-e3ad0a.netlify.app/" class="btn-secondary">Visitar</a>
+                        <a href="https://github.com/marllonxp2/Conversor-de-Moedas" class="btn-secondary">Ver Código</a>
+                    </div>
                 </div>
 
                 <div class="projeto-card fade-in">
@@ -151,23 +177,36 @@
                         - CSS
                         - JavaScript
                     </p>
-                    <!-- <a href="#" class="btn-secondary">Ver Código</a> -->
+                    <div class="btn-group">
+                        <a href="#" class="btn-secondary">Visitar</a>
+                        <a href="#" class="btn-secondary">Ver Código</a>
+                    </div>
                 </div>
 
                 <div class="projeto-card fade-in">
                     <img src="assets/projeto4.png" alt="Projeto 4">
                     <h3>DevSorteio</h3>
-                    <p>Mais um projeto concluído, onde pude colocar em prática minhas habilidades em HTML, CSS e JavaScript. Implementei algumas novidades neste código, como, por exemplo, a janela de alerta personalizada para o número sorteado.
+                    <p>Mais um projeto concluído, onde pude colocar em prática minhas habilidades em HTML, CSS e
+                        JavaScript. Implementei algumas novidades neste código, como, por exemplo, a janela de alerta
+                        personalizada para o número sorteado.
                     </p>
-                    <!-- <a href="#" class="btn-secondary">Ver Código</a> -->
+                    <div class="btn-group">
+                        <a href="https://cheerful-gumption-92c449.netlify.app/" class="btn-secondary">Visitar</a>
+                        <a href="https://github.com/marllonxp2/Sorteador-numero" class="btn-secondary">Ver Código</a>
+                    </div>
                 </div>
 
                 <div class="projeto-card fade-in">
                     <img src="assets/projeto5.png" alt="Projeto 5">
                     <h3>JokenPô</h3>
-                    <p>Mais um projeto concluído, onde pude colocar em prática minhas habilidades em HTML, CSS e JavaScript. Implementei algumas novidades neste código, como, por exemplo, a janela de alerta personalizada para o número sorteado.
+                    <p>Mais um projeto concluído, onde pude colocar em prática minhas habilidades em HTML, CSS e
+                        JavaScript. Implementei algumas novidades neste código, como, por exemplo, a janela de alerta
+                        personalizada para o número sorteado.
                     </p>
-                    <!-- <a href="#" class="btn-secondary">Ver Código</a> -->
+                    <div class="btn-group">
+                        <a href="#" class="btn-secondary">Visitar</a>
+                        <a href="#" class="btn-secondary">Ver Código</a>
+                    </div>
                 </div>
 
                 <div class="projeto-card fade-in">
@@ -182,7 +221,10 @@
                         - CSS
                         - JavaScript
                     </p>
-                    <!-- <a href="#" class="btn-secondary">Ver Código</a> -->
+                    <div class="btn-group">
+                        <a href="#" class="btn-secondary">Visitar</a>
+                        <a href="#" class="btn-secondary">Ver Código</a>
+                    </div>
                 </div>
 
             </div>
@@ -218,6 +260,24 @@
 
     <!-- JS -->
     <script src="js/script.js"></script>
+    <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+</script>
 </body>
 
 </html>

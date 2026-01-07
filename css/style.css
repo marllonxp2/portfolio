@@ -17,8 +17,8 @@ body {
 
 /* ===== VARIÁVEIS ===== */
 :root {
-    --primary: #6d28d9;     /* roxo escuro */
-    --secondary: #5b21b6;   /* roxo mais fechado */
+    --primary: #6d28d9; /* roxo escuro */
+    --secondary: #5b21b6; /* roxo mais fechado */
     --dark: #0b1220;
     --card: rgba(255, 255, 255, 0.05);
     --border: rgba(255, 255, 255, 0.1);
@@ -86,11 +86,9 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: radial-gradient(
-        circle at right,
-        var(--secondary),
-        transparent 60%
-    );
+    background: radial-gradient(circle at right,
+            var(--secondary),
+            transparent 60%);
 }
 
 .hero-content {
@@ -124,12 +122,14 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: 0.3s;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+    transform: translateY(-3px); /* levanta o botão */
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4); /* sombra aparece */
+    background: rgba(59, 130, 246, 0.2);
+    background: linear-gradient(90deg, var(--secondary), var(--primary)); /* troca de cor */
 }
 
 .hero-image img {
@@ -157,6 +157,10 @@ body {
 .sobre-image img {
     width: 100%;
     border-radius: 50%;
+}
+
+.sobre-image:hover {
+    transform: translateY(-10px) scale(1.02);
 }
 
 .sobre-text {
@@ -226,7 +230,7 @@ body {
 }
 
 .btn-secondary {
-    display: block;
+    display: inline-block;
     margin: 15px;
     text-align: center;
     padding: 10px;
@@ -234,6 +238,20 @@ body {
     text-decoration: none;
     color: white;
     background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: all 0.3s ease; /* adiciona suavidade em todas as mudanças */
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px); /* levanta o botão */
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4); /* sombra aparece */
+    background: rgba(59, 130, 246, 0.2);
+    background: linear-gradient(90deg, var(--secondary), var(--primary)); /* troca de cor */
+}
+
+.btn-group {
+    display: flex; /* deixa os botões em linha */
+    gap: 1px; /* espaço entre eles */
+    justify-content: center; /* centraliza na página */
 }
 
 /* ===== CONTATO ===== */
@@ -277,23 +295,107 @@ body {
 }
 
 /* ===== RESPONSIVO ===== */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
+    .hero-text {
+        align-items: center;
+    }
+
     .hero-image {
+        display: flex;
+        justify-content: center;
         margin-top: 30px;
     }
 
+    .hero-image img {
+        max-width: 280px;
+        width: 100%;
+    }
+
+     .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .sobre {
+        padding: 80px 0;
+    }
+
     .sobre-content {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 10px;
+    }
+
+    .sobre-image img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 1px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .sobre-text p {
+        font-size: 0.95rem;
+        line-height: 1.7;
     }
 
     .skills {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+     .hero-text p,
+    .hero-text h1,
+    .hero-text h2 {
+        text-align: center;
+    }
+
+     .nav {
+        display: none;
     }
 }
 
@@ -318,10 +420,21 @@ body {
     opacity: 0;
 }
 
-.hero-text h1 { animation-delay: 0.2s; }
-.hero-text h2 { animation-delay: 0.4s; }
-.hero-text p  { animation-delay: 0.6s; }
-.hero-text button { animation-delay: 0.8s; }
+.hero-text h1 {
+    animation-delay: 0.2s;
+}
+
+.hero-text h2 {
+    animation-delay: 0.4s;
+}
+
+.hero-text p {
+    animation-delay: 0.6s;
+}
+
+.hero-text button {
+    animation-delay: 0.8s;
+}
 
 .hero-image img {
     animation: slideRight 1s ease forwards;
@@ -334,6 +447,7 @@ body {
         transform: translateX(-40px);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -345,6 +459,7 @@ body {
         transform: translateX(40px);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -379,11 +494,9 @@ body {
     position: absolute;
     width: 120%;
     height: 120%;
-    background: radial-gradient(
-        circle at center,
-        var(--primary),
-        transparent 70%
-    );
+    background: radial-gradient(circle at center,
+            var(--primary),
+            transparent 70%);
     opacity: 0.18;
     animation: wave 20s linear infinite;
     border-radius: 50%;
@@ -399,31 +512,29 @@ body {
     bottom: -30%;
     right: -20%;
     animation-duration: 40s;
-    background: radial-gradient(
-        circle at center,
-        var(--secondary),
-        transparent 70%
-    );
+    background: radial-gradient(circle at center,
+            var(--secondary),
+            transparent 70%);
 }
 
 .animated-bg span:nth-child(3) {
     top: 30%;
     left: 20%;
     animation-duration: 35s;
-    background: radial-gradient(
-        circle at center,
-        #7c3aed,
-        transparent 70%
-    );
+    background: radial-gradient(circle at center,
+            #7c3aed,
+            transparent 70%);
 }
 
 @keyframes wave {
     0% {
         transform: translate(0, 0) scale(1);
     }
+
     50% {
         transform: translate(40px, -60px) scale(1.2);
     }
+
     100% {
         transform: translate(0, 0) scale(1);
     }
@@ -440,8 +551,10 @@ footer {
 .hero-buttons {
     display: flex;
     align-items: center;
-    gap: 24px;          /* espaço garantido */
-    margin-top: 25px;  /* afasta do texto */
+    gap: 24px;
+    /* espaço garantido */
+    margin-top: 25px;
+    /* afasta do texto */
 }
 
 /* Garante que os links se comportem como botão */
@@ -468,3 +581,105 @@ footer {
     transform: translateY(-3px);
 }
 
+/* ===== HEADER AJUSTE ===== */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== HAMBURGUER ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+/* ===== MENU MOBILE ===== */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, #050b1a, #08142e);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    color: white;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+/* ÍCONES NO MENU MOBILE */
+.mobile-social {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.mobile-social a {
+    font-size: 1.4rem;
+}
+
+/* ===== ATIVO ===== */
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .nav,
+    .social-icons {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* BOTÃO FECHAR (X) */
+.close-menu {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.close-menu:hover {
+    transform: rotate(90deg);
+    opacity: 0.7;
+}
