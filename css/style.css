@@ -71,6 +71,7 @@ body {
 }
 
 .social-icons a {
+    font-size: 20px; /* aumente aqui (ex: 36px, 40px) */
     margin-left: 15px;
     color: #cbd5f5;
     transition: 0.3s;
@@ -113,6 +114,12 @@ body {
     margin-bottom: 25px;
 }
 
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 15px;
+}
+
 .btn-primary {
     padding: 12px 28px;
     background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -130,12 +137,6 @@ body {
     box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4); /* sombra aparece */
     background: rgba(59, 130, 246, 0.2);
     background: linear-gradient(90deg, var(--secondary), var(--primary)); /* troca de cor */
-}
-
-.hero-image img {
-    width: 100%;
-    max-width: 380px;
-    border-radius: 15px;
 }
 
 /* ===== SOBRE ===== */
@@ -157,10 +158,6 @@ body {
 .sobre-image img {
     width: 100%;
     border-radius: 50%;
-}
-
-.sobre-image:hover {
-    transform: translateY(-10px) scale(1.02);
 }
 
 .sobre-text {
