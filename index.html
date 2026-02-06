@@ -47,30 +47,30 @@
             </div>
 
             <!-- BOTÃO HAMBURGUER -->
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
     <!-- MENU MOBILE -->
-<nav class="mobile-menu">
+    <nav class="mobile-menu">
 
-     <button class="close-menu">&times;</button>
+        <button class="close-menu">&times;</button>
 
-    <a href="#home">Home</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#contato">Contato</a>
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
 
-    <div class="mobile-social">
-        <a href="https://github.com/marllonxp2"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/marllonxp2"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/marllonxp2"><i class="fab fa-instagram"></i></a>
-    </div>
-</nav>
+        <div class="mobile-social">
+            <a href="https://github.com/marllonxp2"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/marllonxp2"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/marllonxp2"><i class="fab fa-instagram"></i></a>
+        </div>
+    </nav>
 
     <!-- ===== HERO / HOME ===== -->
     <section id="home" class="hero">
@@ -78,13 +78,13 @@
             <div class="hero-text">
                 <p>Olá, eu sou o</p>
                 <h1>Marllon Santos</h1>
-                <h2>Desenvolvedor Front-End</h2>
+                <h2>Engenheiro de Software</h2>
 
                 <a href="#projetos" class="btn-primary">
                     Projetos
                 </a>
 
-                <a href="assets/curriculo-marllon.pdf" class="btn-primary" target="_blank">
+                <a href="assets/curriculo-back-end.pdf" class="btn-primary" target="_blank">
                     Currículo
                 </a>
             </div>
@@ -107,17 +107,28 @@
 
                 <div class="sobre-text">
                     <p>
-                        Olá, sou Marllon Santos, Ex-Fuzileiro Naval.
+                        Olá, sou Marllon, ex-militar em transição de carreira para a área de Desenvolvimento de
+                        Software, com foco em Back-end.
                         <br>
-                        Apesar da minha profissão inicial, descobri minha verdadeira paixão: o Desenvolvimento Front
-                        End. Estou em transição de carreira e após uma profunda reflexão e pesquisa, decidi me aventurar no
-                        mundo da programação. Comecei meus estudos fazendo faculdade de Analise e Desenvolvimento de
-                        Sistemas e rapidamente me apaixonei pelo desenvolvimento de interfaces web
-                        dinâmicas, utilizando tecnologias como HTML, CSS, JavaScript e React.
                         <br>
-                        Estou determinado a aprofundar minhas habilidades e construir uma carreira sólida no
-                        desenvolvimento web. Estou aberto a oportunidades e colaborações que me permitam crescer e
-                        contribuir significativamente.
+                        Após minha experiência profissional inicial, descobri minha verdadeira paixão pela tecnologia.
+                        Depois de uma profunda reflexão e pesquisa, decidi direcionar minha carreira para o
+                        desenvolvimento de software. Sou formado em Analise e Desenvolvimento de Sistemas. Atualmente,
+                        curso Engenharia de Software, buscando uma formação sólida e alinhada às exigências do mercado.
+                        <br>
+                        <br>
+                        Tenho direcionado meus estudos para o desenvolvimento back-end com Java e Spring, com foco na
+                        criação de APIs REST, implementação de regras de negócio, integração com bancos de dados e
+                        aplicação de boas práticas de desenvolvimento. Possuo também conhecimentos em HTML, CSS,
+                        JavaScript e React, o que me permite uma boa compreensão da integração entre front-end e
+                        back-end.
+                        <br>
+                        <br>
+                        Sou uma pessoa disciplinada, comprometida e motivada pelo aprendizado contínuo, com o objetivo
+                        de evoluir tecnicamente e construir uma carreira sólida como desenvolvedor back-end. Estou
+                        aberto a oportunidades, desafios e colaborações que me permitam aprender, crescer e contribuir
+                        de forma significativa em projetos reais.
+                        <br>
                         <br>
                         Vamos nos conectar e explorar como podemos colaborar!
                     </p>
@@ -126,9 +137,10 @@
                         <span class="skill">HTML</span>
                         <span class="skill">CSS</span>
                         <span class="skill">JavaScript</span>
-                        <span class="skill">TypeScript</span>
-                        <span class="skill">React</span>
-
+                        <span class="skill">React</span>  
+                        <span class="skill">Java</span>
+                        <span class="skill">MySQL</span>
+                        <span class="skill">MongoDB</span>
                         <span class="skill">GitHub</span>
                     </div>
                 </div>
@@ -261,23 +273,23 @@
     <!-- JS -->
     <script src="js/script.js"></script>
     <script>
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
-    });
-
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.classList.remove('menu-open');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
         });
-    });
-</script>
+
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    </script>
 </body>
 
 </html>
